@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<clickhouse>
+    <users>
+        <pipeline_user>
+            <!-- Password set via env var CLICKHOUSE_PASSWORD in docker-compose -->
+            <password>pipeline_pass_2024</password>
+            <networks>
+                <ip>::/0</ip>
+            </networks>
+            <profile>default</profile>
+            <quota>default</quota>
+            <access_management>1</access_management>
+        </pipeline_user>
+
+        <!-- Read-only user for dashboard connections -->
+        <dashboard_user>
+            <password>dashboard_readonly_2024</password>
+            <networks>
+                <ip>::/0</ip>
+            </networks>
+            <profile>readonly</profile>
+            <quota>default</quota>
+        </dashboard_user>
+    </users>
+
+    <profiles>
+        <default>
+            <max_memory_usage>10000000000</max_memory_usage>
+            <use_uncompressed_cache>0</use_uncompressed_cache>
+            <load_balancing>random</load_balancing>
+        </default>
+        <readonly>
+            <readonly>1</readonly>
+            <max_memory_usage>5000000000</max_memory_usage>
+        </readonly>
+    </profiles>
+
+    <quotas>
+        <default>
+            <interval>
+                <duration>3600</duration>
+                <queries>1000</queries>
+                <errors>100</errors>
+                <result_rows>1000000000</result_rows>
+                <read_rows>10000000000</read_rows>
+                <execution_time>3600</execution_time>
+            </interval>
+        </default>
+    </quotas>
+</clickhouse>

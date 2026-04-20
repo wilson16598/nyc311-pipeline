@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<clickhouse>
+    <!-- Listen on all interfaces inside Docker -->
+    <listen_host>0.0.0.0</listen_host>
+
+    <!-- ZooKeeper for ReplicatedMergeTree coordination -->
+    <zookeeper>
+        <node>
+            <host>zookeeper</host>
+            <port>2181</port>
+        </node>
+    </zookeeper>
+
+    <!-- Cluster definition — 2 shards, 1 replica each -->
+    <remote_servers>
+        <nyc311_cluster>
+            <shard>
+                <replica>
+                    <host>clickhouse-01</host>
+                    <port>9000</port>
+                    <user>pipeline_user</user>
+                    <password>pipeline_pass_2024</password>
+                </replica>
+            </shard>
+            <shard>
+                <replica>
+                    <host>clickhouse-02</host>
+                    <port>9000</port>
+                    <user>pipeline_user</user>
+                    <password>pipeline_pass_2024</password>
+                </replica>
+            </shard>
+        </nyc311_cluster>
+    </remote_servers>
+
+    <!-- This node's identity in the cluster -->
+    <macros>
+        <shard>01</shard>
+        <replica>clickhouse-01</replica>
+    </macros>
+
+    <!-- Performance tuning -->
+    <max_connections>500</max_connections>
+    <keep_alive_timeout>3</keep_alive_timeout>
+    <max_concurrent_queries>100</max_concurrent_queries>
+    <uncompressed_cache_size>8589934592</uncompressed_cache_size>
+    <mark_cache_size>5368709120</mark_cache_size>
+
+    <!-- Logging -->
+    <logger>
+        <level>information</level>
+        <log>/var/log/clickhouse-server/clickhouse-server.log</log>
+        <errorlog>/var/log/clickhouse-server/clickhouse-server.err.log</errorlog>
+        <size>1000M</size>
+        <count>10</count>
+    </logger>
+</clickhouse>

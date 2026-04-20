@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+
+# UV
+.uv/
+uv.lock
+
+# Environment — NEVER commit real credentials
+.env
+!.env.example
+
+# Pipeline runtime files
+logs/
+.pipeline_checkpoint.json
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Docker volumes (local)
+clickhouse-data/
+zookeeper-data/

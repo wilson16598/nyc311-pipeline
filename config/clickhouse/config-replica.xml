@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<clickhouse>
+    <listen_host>0.0.0.0</listen_host>
+
+    <zookeeper>
+        <node>
+            <host>zookeeper</host>
+            <port>2181</port>
+        </node>
+    </zookeeper>
+
+    <remote_servers>
+        <nyc311_cluster>
+            <shard>
+                <replica>
+                    <host>clickhouse-01</host>
+                    <port>9000</port>
+                    <user>pipeline_user</user>
+                    <password>pipeline_pass_2024</password>
+                </replica>
+            </shard>
+            <shard>
+                <replica>
+                    <host>clickhouse-02</host>
+                    <port>9000</port>
+                    <user>pipeline_user</user>
+                    <password>pipeline_pass_2024</password>
+                </replica>
+            </shard>
+        </nyc311_cluster>
+    </remote_servers>
+
+    <!-- This node identifies itself as shard 02 -->
+    <macros>
+        <shard>02</shard>
+        <replica>clickhouse-02</replica>
+    </macros>
+
+    <max_connections>500</max_connections>
+    <max_concurrent_queries>100</max_concurrent_queries>
+
+    <logger>
+        <level>information</level>
+        <log>/var/log/clickhouse-server/clickhouse-server.log</log>
+        <errorlog>/var/log/clickhouse-server/clickhouse-server.err.log</errorlog>
+        <size>1000M</size>
+        <count>10</count>
+    </logger>
+</clickhouse>
