@@ -255,6 +255,8 @@ def _write_clean(records: list[dict]) -> None:
 def run_cleaning() -> dict[str, int]:
     wait_for_clickhouse()
     logger.info("=== CLEAN PIPELINE START ===")
+    client = get_client()
+    client.command(f"TRUNCATE TABLE {settings.clickhouse.database}.{settings.clean_table}")
 
     raw_df = _load_raw_data()
     raw_count = len(raw_df)

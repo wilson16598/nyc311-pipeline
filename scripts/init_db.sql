@@ -14,8 +14,8 @@ CREATE DATABASE IF NOT EXISTS nyc311;
 CREATE TABLE IF NOT EXISTS nyc311.requests_raw
 (
     unique_key       String,
-    created_date     Datatime,
-    closed_date      Nullable(String),
+    created_date     DateTime,
+    closed_date      DateTime,
     agency           Nullable(String),
     agency_name      Nullable(String),
     complaint_type   Nullable(String),

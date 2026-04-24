@@ -76,7 +76,7 @@ Prerequisites
 - Optional: NYC Open Data API token
 
 1. Clone repository
-git clone https://github.com/YOUR_USERNAME/nyc311-pipeline.git
+git clone https://github.com/wilson16598/nyc311-pipeline.git
 cd nyc311-pipeline
 2. Environment setup
 cp .env.example .env
@@ -130,13 +130,20 @@ We compute 3 analytics tables:
 
 7. Screenshots
 
+## Monthly Trends
+![Monthly Trends](docs\screenshots\MonthlyRequest.png)
 
-#######################
-Dashboard overview
-Monthly trends
-Borough heatmap
-Agency performance chart
+## Borough Heatmap
+![Borough Heatmap](docs\screenshots\BoroughHeatMap.png)
 
+## Top 10 Complaints
+![Top 10 Complaints](docs\screenshots\Top10Complaints.png)
+
+## Agency Resolution Performance
+![Agent Resolution](docs\screenshots\AgencyResolution.png)
+
+## Resolution Time over Time
+![Resolution Time](docs\screenshots\ResolutionTime.png)
 
 
 8. Team Members
