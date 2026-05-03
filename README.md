@@ -150,11 +150,9 @@ We compute 3 analytics tables:
 
 
 8. Team Members
-Name	Role
-You	Pipeline + ClickHouse architecture
-Teammate 1	Data cleaning + models
-Teammate 2	Aggregations + dashboard
-Teammate 3	Testing + documentation
+Laura	   - Visualizations, Clickhouse architecture, environment set up
+Franceso  - Cleaning, Aggregations, partitioning and reliability
+
 
 9. What We Learned
 
