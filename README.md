@@ -102,7 +102,7 @@ Run stages individually
 --stage clean
 --stage agg
 
-Expected output (shortened)
+Expected output
 STAGE 1: RAW INGESTION
 - Fetches NYC Open Data API in batches
 - Validates with Pydantic (RawRequest)
@@ -129,6 +129,9 @@ We compute 3 analytics tables:
 
 
 7. Screenshots
+
+### Architecture
+![Dashboard](docs/screenshots/DRAWING.png)
 
 ## Monthly Trends
 ![Monthly Trends](docs\screenshots\MonthlyRequest.png)
