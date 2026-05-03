@@ -134,19 +134,19 @@ We compute 3 analytics tables:
 ![Dashboard](docs/screenshots/DRAWING.png)
 
 ## Monthly Trends
-![Monthly Trends](docs\screenshots\MonthlyRequest.png)
+![Monthly Trends](docs/screenshots/MonthlyRequest.png)
 
 ## Borough Heatmap
-![Borough Heatmap](docs\screenshots\BoroughHeatMap.png)
+![Borough Heatmap](docs/screenshots/BoroughHeatMap.png)
 
 ## Top 10 Complaints
-![Top 10 Complaints](docs\screenshots\Top10Complaints.png)
+![Top 10 Complaints](docs/screenshots/Top10Complaints.png)
 
 ## Agency Resolution Performance
-![Agent Resolution](docs\screenshots\AgencyResolution.png)
+![Agent Resolution](docs/screenshots/AgencyResolution.png)
 
 ## Resolution Time over Time
-![Resolution Time](docs\screenshots\ResolutionTime.png)
+![Resolution Time](docs/screenshots/ResolutionTime.png)
 
 
 8. Team Members
