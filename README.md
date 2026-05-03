@@ -130,17 +130,13 @@ We compute 3 analytics tables:
 ## Running Tests
 
 - To verify the pipeline logic and data transformations:
-- Run all tests:
-- uv run pytest
+Run all tests: uv run pytest
 
-- Run with verbose output:
-- uv run pytest -v
+- Run with verbose output: uv run pytest -v
 
-- Run a specific test file:
-- uv run pytest tests/test_models.py
+- Run a specific test file: uv run pytest tests/test_models.py
 
-- Run with coverage:
-- uv run pytest --cov=src
+- Run with coverage: uv run pytest --cov=src
 
 These tests validate:
 - Pydantic models (schema + edge cases)
@@ -149,11 +145,11 @@ These tests validate:
 
 ## Viewing the Dashboard
 
-- To launch the interactive analytics dashboard:
+To launch the interactive analytics dashboard:
 
-- uv run streamlit run dashboard/app.py
+uv run streamlit run dashboard/app.py
 
-- Then open your browser:
+Then open your browser:
 http://localhost:8501
 
 Dashboard Features:
@@ -163,7 +159,7 @@ Dashboard Features:
 - Agency performance analysis (resolution time vs rate)
 - KPI summary cards
 
-- ClickHouse must be running before launching the dashboard:
+ClickHouse must be running before launching the dashboard:
 docker compose up -d
 
 
