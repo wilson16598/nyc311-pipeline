@@ -150,8 +150,9 @@ We compute 3 analytics tables:
 
 
 8. Team Members
-Laura	   - Visualizations, Clickhouse architecture, environment set up
-Franceso  - Cleaning, Aggregations, partitioning and reliability
+
+- Laura - Visualizations, Clickhouse architecture, environment set up
+- Francesco - Cleaning, Aggregations, partitioning and reliability
 
 
 9. What We Learned
